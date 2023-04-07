@@ -43,6 +43,7 @@ export default {
   textarea {
     padding: 10px;
     width: 500px;
+    max-width: 100%;
     resize: none;
   }
 </style>
