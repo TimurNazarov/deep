@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     computedInput() {
-      return this.input.replaceAll('deep', '♂ deep ♂')
+      return this.input.replaceAll(/deep/gi, '♂♂♂ deep ♂♂♂')
     }
   }
 }
