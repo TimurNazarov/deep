@@ -35,6 +35,7 @@ export default {
   .copy {
     background: rgba(0,0,0,.1);
     width: 500px;
+    max-width: 100%;
     min-height: 200px;
     margin-top: 20px;
     padding: 10px;
