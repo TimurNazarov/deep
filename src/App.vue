@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
       <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-      <textarea  v-model="input"></textarea>
+      <textarea @input="updateInput"></textarea>
       <div class="copy">{{ computedInput }}</div>
     </div>
 </template>
@@ -15,9 +15,14 @@ export default {
       input: ''
     }
   },
+  methods: {
+    updateInput(event) {
+      this.input = event.target.value;
+    }
+  },
   computed: {
-    computedInput() {
-      return this.input.replaceAll(/deep/gi, '♂♂♂ deep ♂♂♂')
+    computedInput() {/deep/gi
+      return this.input.replaceAll(/deep/gi, '♂ deep ♂').replaceAll(/right/gi, '♂ right ♂')
     }
   }
 }
